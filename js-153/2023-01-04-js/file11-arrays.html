@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="x"></div>
+    <script>
+        let arr = [1, 2, 3, "aaa", {}, true]; // create an array
+        console.log(arr); // print
+        console.log(arr[0]); // print first element
+        arr[0] = 100; // assign value to index 0
+        console.log(arr); // print
+        console.log(arr.toString()); // print
+        document.getElementById("x").innerHTML = arr; // display array in the document
+
+        // sorting
+        arr = ["Dor", "Meir", "Shira", "Ari"];
+        console.log(arr);
+        arr.sort();
+        console.log(arr);
+
+        arr.reverse();
+        console.log(arr);
+
+        // create an array with 5 random numbers [0-25], print it, sort it, print again
+        let r = Math.floor(Math.random() * 26);
+        console.log(r);
+
+        let numbers = [];
+        for (let i = 0; i < 5; i++) {
+            numbers[i] = Math.floor(Math.random() * 10001);
+        }
+
+        console.log(numbers);
+
+        // the sort method can get a call back implementing comparator
+        // function f(a, b) {
+        //    return a - b;
+        // }
+        // numbers.sort(f);
+
+        numbers.sort((a, b) => a - b);
+        console.log(numbers);
+    </script>
+</body>
+
+</html>

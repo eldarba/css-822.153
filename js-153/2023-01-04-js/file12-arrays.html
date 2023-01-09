@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>colors</h1>
+    <ol id="list">
+    </ol>
+    <script>
+        let arr = ["red", "green", "blue", "aaa", "bbb"];
+        // display array elements as items in an ordered list
+        let list = document.getElementById("list"); // get a reference to the oedered list object
+
+        for (let index = 0; index < arr.length; index++) {
+            const element = arr[index]; // get the next array element
+            let item = document.createElement("li"); // create an li element
+            let text = document.createTextNode(element); // create a text node
+            item.appendChild(text); // append the text node as a child for the li
+            list.appendChild(item); // append the li as child for the ol
+        }
+
+        arr.forEach(element => {
+            let item = document.createElement("li"); // create an li element
+            let text = document.createTextNode(element); // create a text node
+            item.appendChild(text); // append the text node as a child for the li
+            list.appendChild(item); // append the li as child for the ol
+        });
+
+    </script>
+</body>
+
+</html>

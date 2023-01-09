@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = 5.3; // number
+        console.log(x, typeof x);
+
+        x = true; // boolean
+        console.log(x, typeof x);
+
+        x = "Hi"; // string
+        console.log(x, typeof x);
+
+        x = {}; // object
+        console.log(x, typeof x);
+
+        // object
+        let person = {
+            // fields
+            id: 201,
+            name: 'Moshe',
+            age: 26,
+            // function
+            speak: function () {
+                console.log("Hi");
+            }
+        };
+        console.log(person);
+
+        person.name = "Oren";
+        console.log(person);
+
+        // fields can be added to objects dynamically
+        person.email = "aaa@mail";
+        console.log(person);
+        person.speak();
+
+        console.log(typeof person.speak);
+
+        let birthdate = new Date(2000, 0, 25);
+        console.log(birthdate);
+
+        // operators
+        console.log(3 * 5); // multiply
+        console.log(3 ** 5); // exponent 3^5
+        console.log(9 ** 0.5); // square root 9
+
+        console.log(5 == 5);
+        console.log(5 == "5"); // check for value
+        console.log(5 === "5"); // check for value and type
+
+        // ternary operator ?:
+        let a = prompt("enter a"); // input from user
+        let b = prompt("enter b"); // input from user
+        let max = a > b ? a : b;
+        // if (a > b) {
+        //     max = a;
+        // } else {
+        //     max = b;
+        // }
+        console.log("max is " + max);
+
+    </script>
+</body>
+
+</html>

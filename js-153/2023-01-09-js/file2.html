@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ['red', 'green', 'blue'];
+
+        // add element using push
+        let theNewLength = arr.push('black');
+        console.log(arr.toString());
+        console.log(theNewLength);
+        
+        // add element using index
+        arr[arr.length] = "white";
+        console.log(arr.toString());
+
+        // convert array elements to string
+        let str = arr.join(" | ");
+        console.log(str);
+
+        console.log(arr.join(", "));
+        console.log('[', arr.join(", "), ']');
+        
+        // pop removes the last element and returns it
+        let lastElement = arr.pop();
+        console.log(lastElement);
+        console.log(arr.join(", "));
+        
+        // delete is not the best way to remove
+        delete arr[2];
+        console.log(arr.join(", "));
+        console.log(arr[2]);
+
+
+    </script>
+</body>
+</html>

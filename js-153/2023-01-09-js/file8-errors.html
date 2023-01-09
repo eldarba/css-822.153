@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        class Person {
+
+            constructor(id, name, age) {
+                this.id = id;
+                this.name = name;
+                this.setAge(age);
+            }
+
+            setAge(age) {
+                if (age >= 0 && age <= 120) {
+                    this.age = age;
+                } else {
+                    // we can throw an Error object:
+                    // throw new Error("age is out of range: " + age);
+                    
+                    // we can throw our own error object:
+                    throw new PersonAgeError("age is out of range: " + age);
+
+                    // we can throw any type:
+                    // throw "age illegal: " + age;
+                }
+            }
+        }
+
+        // our custom made error types
+        class PersonAgeError extends Error {
+            constructor(message) {
+                super(message);
+                this.name = "PersonAgeError";
+            }
+        }
+
+        let p1 = new Person(101, 'Eithan', 25);
+        p1.setAge(26);
+        console.log(p1);
+        p1.setAge(28);
+        console.log(p1);
+        p1.setAge(260);
+        console.log(p1);
+    </script>
+</body>
+
+</html>

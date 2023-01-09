@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome to JavaScript</h1>
+    <div id="x">This is text</div>
+    <button onclick="f1()">click</button>
+
+    <!-- internal JS-->
+    <script>
+        window.console.log("Hello JavaScript");
+        window.document.getElementById("x").style.color = "red";
+        document.write("This is from JS write function");
+
+        alert("this is popup window");
+
+        console.dir(window);
+        
+        function f1() {
+            document.write("This is from JS write function F1");
+        }
+    </script>
+
+    <!-- external JS-->
+    <script src="file1.js"></script>
+</body>
+
+</html>

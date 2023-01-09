@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Grade</h1>
+    <!-- in this div we show the grade a numerical value -->
+    <div id="grade"></div>
+    <!-- in this div we show the grade a literal evaluation (words) -->
+    <div id="evaluation"></div>
+    <script>
+
+        let grade = Math.floor(Math.random() * 13);
+        document.getElementById("grade").innerHTML = grade;
+
+        // 0 - 5    fail
+        // 6 - 8    ok
+        // 9        good
+        // 10       excelent
+        switch (grade) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                document.getElementById("evaluation").innerHTML = "Fail - try harder nexst time";
+                document.getElementById("evaluation").style.color='red';
+                break;
+            case 6:
+            case 7:
+            case 8:
+                document.getElementById("evaluation").innerHTML = "OK";
+                break;
+            case 9:
+                document.getElementById("evaluation").innerHTML = "Good";
+                break;
+            case 10:
+                document.getElementById("evaluation").innerHTML = "Excelent";
+                break;
+                
+                default:
+                    document.getElementById("evaluation").innerHTML = "the value " + grade + " is illegal for a grade";
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = [1, 2, 3];
+        let arr2 = [4, 5, 6];
+        let arr3 = [7, 8, 9];
+        let arr4 = arr1.concat(arr2).concat(arr3);
+        console.log(arr4.join());
+
+        // use slice method to take a slice out of an array
+        let arr5 = arr4.slice(3, 6);
+        console.log(arr5.join());
+        
+        console.log("===============");
+        let arr = [0, 1, 2, 3, 4, 5];
+        console.log(arr.join());
+        let removedElement = arr.shift(); // remove first element
+        console.log(arr.join());
+        console.log(removedElement); // print the removed element
+        
+        let newArrLength = arr.unshift(100, 200); // add elements to the array from start
+        console.log(arr.join());
+        console.log(newArrLength);
+
+    </script>
+</body>
+
+</html>

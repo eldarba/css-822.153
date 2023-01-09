@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Scopes</h1>
+   <script>
+    {
+        var n = 100; // var declarations are hoisted
+        let x = 5;
+        console.log(x);
+        x++;
+        console.log(x);
+
+        const y = 10;
+        console.log(y);
+        // y++; // error - cannot reassign a constant
+    }
+    // console.log(x); // error - out of scope
+    // console.log(y); // error - out of scope
+    console.log(n);
+   </script>
+</body>
+</html>

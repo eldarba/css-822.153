@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [40, 100, 1, 5, 25, 10];
+        console.log(arr.join());
+
+        arr.sort();
+        console.log(arr.join());
+
+        // when a method get a callback function we should
+        // give the callback but not call it - no ()
+        arr.sort(compareFn);
+        console.log(arr.join());
+
+        function compareFn(a, b) {
+            return a - b;
+        }
+
+        console.log("=====================");
+        arr = [45, 4, 9, 16, 25];
+        console.log(arr.join());
+        // filtering elements with conditions
+        let arr18AndUp = arr.filter(predicateFn);
+        console.log(arr18AndUp.join());
+
+        function predicateFn(e) {
+            return e >= 18;
+        }
+
+        console.log("=====================");
+        console.log(arr.join());
+        // reduce the array to a single value
+        let result = arr.reduce(callbackFnMax);
+        console.log(result);
+
+        // write a callback that reduces the array to a sum
+        function callbackFnSum(total, currentElement) {
+            total = total + currentElement;
+            return total;
+        }
+
+        // write a callback that reduces the array to a maximum
+        function callbackFnMax(max, currentElement) {
+            // if(currentElement>max){
+            //     max = currentElement;
+            // }
+            // return max;
+            return max > currentElement ? max : currentElement;
+        }
+        console.log("=====================");
+        console.log(arr.join());
+
+        // every checks that all elements meet a condition
+        let allOver18 = arr.every(check18);
+        console.log(allOver18);
+
+
+        function check18(e) {
+            return e >= 18;
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+
+            constructor(id, name, age) {
+                this.id = id;
+                this.name = name;
+                this.age = age;
+            }
+
+            printDetails() {
+                console.log('Person[id=' + this.id + ", name=" + this.name + ", age=" + this.age + "]");
+            }
+        }
+
+        class Employee extends Person {
+
+            constructor(id, name, age, salary) {
+                super(id, name, age);
+                this.salary = salary;
+            }
+
+            printDetails() {
+                console.log('Employee[id=' + this.id + ", name=" + this.name + ", age=" + this.age + ", salary=" + this.salary + "]");
+            }
+
+        }
+
+        let emp1 = new Employee(222, 'aaa', 33, 50000);
+        emp1.printDetails();
+
+        let p1 = new Person();
+        p1.printDetails();
+
+        let p2 = new Person(333, 'Yoel', 31);
+        p2.printDetails();
+
+        console.log("=======================");
+        console.log(p2);
+        console.log(emp1);
+
+    </script>
+</body>
+
+</html>

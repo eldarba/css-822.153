@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="in1" type="text" onchange="change()">
+    <input id="in2" type="text" oninput="input()">
+    <button onclick="reset()">reset</button>
+    <div id="x"></div>
+
+    <script>
+        function reset() {
+            document.getElementById("x").innerHTML = null;
+            document.getElementById("in1").value = null;
+            document.getElementById("in2").value = null;
+        }
+        function change() {
+            let text = document.getElementById("in1").value;
+            let divElement = document.getElementById("x");
+            divElement.innerHTML = text;
+        }
+        function input() {
+            let text = document.getElementById("in2").value;
+            let divElement = document.getElementById("x");
+            divElement.innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>

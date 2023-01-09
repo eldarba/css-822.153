@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // create an array
+        let arr = ['aaa', 'bbb', 'ccc'];
+
+        arr.forEach(myCallbackFn1);
+
+        function myCallbackFn1(e, index, theArr) {
+            console.log("the current element: ", e);
+            console.log("index: " + index);
+            console.log(theArr);
+            console.log("=================================");
+        }
+        
+        function myCallbackFn2(e) {
+            console.log("the current element: ", e);
+            console.log("=================================");
+        }
+
+    </script>
+</body>
+</html>

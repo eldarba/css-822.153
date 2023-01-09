@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JS Errors</h1>
+    <script>
+
+        try {
+            f1();
+        } catch (error) {
+            console.log("ERROR name: " + error.name + ", message: " + error.message);
+        } finally {
+            console.log("finally block will always run");
+        }
+
+        function f1() {
+            console.log("invoking an existing function");
+
+            if (Math.random() < 0.5) {
+                f2();
+            }
+
+            console.log("end of f1 function");
+        }
+
+    </script>
+</body>
+
+</html>
